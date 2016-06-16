@@ -1,0 +1,205 @@
+// http://ionicframework.com/docs/v2/theming/
+// App Shared Imports
+// --------------------------------------------------
+// These are the imports which make up the design of this app.
+// By default each design mode includes these shared imports.
+// App Shared Sass variables belong in app.variables.scss.
+@import "../pages/getting-started/getting-started";
+@import "../pages/list/list";
+@import "../pages/scientific-facts-page/scientific-facts-page";
+@import "../pages/selected-fact-page/selected-fact-page";
+@import 'colors';
+
+*:focus {
+    outline: none !important;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.container-fluid {
+    background-color: #F4F4F4;
+    min-height: 100vh;
+    color: white;
+
+    &.asphalt {
+        background-color: $asphalt;
+    }
+}
+
+.relative {
+    position: relative;
+}
+
+.container-fluid {
+    .container {
+        margin: 0 auto;
+        padding: 0;
+    }
+}
+
+.modal-lg.modal-dialog {
+    padding-top: 20%;
+}
+
+.btn {
+    border-radius: 0;
+}
+
+.modal-content {
+    border-radius: 0;
+    left: 50%;
+    margin-left: -200px;
+    top: 30%;
+    width: 400px;
+}
+
+.modal-body {
+    padding: 0 15px;
+}
+
+.modal-header, .modal-footer {
+    border: none;
+}
+
+.fa-plus-circle {
+    font-size: 50px;
+}
+
+.form-wrapper {
+    input, textarea {
+        margin: 5px;
+        margin-left: 0;
+        color: black;
+        border: none !important;
+        border-radius: 0;
+    }
+}
+
+.btn-default {
+    color: #333;
+    background-color: #A6ABAF;
+    width: 100%;
+    border-radius: 0;
+    color: white;
+    text-transform: uppercase;
+    border: none;
+    transition-duration: 0.3s;
+    &:hover {
+        background-color: #DFBA2E;
+    }
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.content a {
+    color: $darkgrey;
+}
+
+h2, h3 {
+    color: white;
+}
+
+.chart-height {
+    min-height: 200px;
+}
+
+.chart {
+    display: block;
+    width: 100%;
+}
+
+.space-top {
+    margin-top: 50px;
+}
+
+.spinner {
+    margin: 100px auto;
+    width: 40px;
+    height: 40px;
+    position: relative;
+}
+
+.cube1, .cube2 {
+    background-color: $cyan;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    -webkit-animation: sk-cubemove 1.8s infinite ease-in-out;
+    animation: sk-cubemove 1.8s infinite ease-in-out;
+}
+
+.cube2 {
+    background-color: $yellow;
+}
+
+.cube2 {
+    -webkit-animation-delay: -0.9s;
+    animation-delay: -0.9s;
+}
+
+@-webkit-keyframes sk-cubemove {
+    25% {
+        -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5)
+    }
+    50% {
+        -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg)
+    }
+    75% {
+        -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5)
+    }
+    100% {
+        -webkit-transform: rotate(-360deg)
+    }
+}
+
+@keyframes sk-cubemove {
+    25% {
+        transform: translateX(42px) rotate(-90deg) scale(0.5);
+        -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5);
+    }
+    50% {
+        transform: translateX(42px) translateY(42px) rotate(-179deg);
+        -webkit-transform: translateX(42px) translateY(42px) rotate(-179deg);
+    }
+    50.1% {
+        transform: translateX(42px) translateY(42px) rotate(-180deg);
+        -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg);
+    }
+    75% {
+        transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+        -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+    }
+    100% {
+        transform: rotate(-360deg);
+        -webkit-transform: rotate(-360deg);
+    }
+}
+
+body {
+    background-color: $asphalt;
+}
+
+.loading {
+
+    margin-top: 20%;
+
+    h4 {
+        text-align: center;
+        padding-left: 29px;
+        text-transform: uppercase;
+    }
+}
