@@ -17,6 +17,7 @@ import {GraphService} from "mia-distributed/service/graph.service";
 import {ApplicationService} from "mia-distributed/service/application/application.service";
 import {UserService} from "mia-distributed/service/user/user.service";
 import {CustomBrowserXhr} from "mia-distributed/service/CustomBrowserXhr";
+import {ApplicationMetaPickerService} from "mia-distributed/comp/applicationMetaPicker/applicationMetaPicker.service";
 
 @Component({
     templateUrl: 'build/app.html'
@@ -63,6 +64,7 @@ var appPromise = ionicBootstrap(MyApp, [
     MetricService,
     GraphService,
     ApplicationService,
+    ApplicationMetaPickerService,
     provide(BrowserXhr, {useClass: CustomBrowserXhr})
 ]);
 
