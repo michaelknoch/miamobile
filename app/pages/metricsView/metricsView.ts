@@ -12,8 +12,4 @@ export class MetricsView {
 
     constructor(private nav: NavController, navParams: NavParams) {
     }
-
-    handleSystemPick(system) {
-        this.nav.push(Dashboard);
-    }
 }

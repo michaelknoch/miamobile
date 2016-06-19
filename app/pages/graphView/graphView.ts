@@ -1,12 +1,11 @@
 import {Component} from "@angular/core";
 import {NavController, NavParams} from 'ionic-angular';
 import {SystemPicker} from 'mia-distributed/comp/systemList/systemPicker/systemPicker.comp'
-import {Dashboard} from "mia-distributed/comp/dashboard/comp";
-import {Metrics} from "mia-distributed/comp/metrics/metrics.comp";
+import {Graph} from "mia-distributed/comp/graph/graph.comp";
 
 @Component({
-    templateUrl: 'build/pages/metricsView/metricsView.html',
-    directives: [Metrics]
+    templateUrl: 'build/pages/graphView/graphView.html',
+    directives: [Graph]
 })
 export class GraphView {
 
