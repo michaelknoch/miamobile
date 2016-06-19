@@ -1,0 +1,13 @@
+<ion-navbar *navbar>
+    <button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Lists</ion-title>
+</ion-navbar>
+
+
+<ion-content>
+    <div class="container">
+        <system-picker (update)="handleSystemPick($event)"></system-picker>
+    </div>
+</ion-content>
