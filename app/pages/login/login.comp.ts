@@ -1,11 +1,10 @@
 import {Component} from '@angular/core';
 import {NavController} from 'ionic-angular';
-import {ScientificFactsPage} from '../scientific-facts-page/scientific-facts-page';
-
 import {LoginRegister} from 'mia-distributed/comp/login/loginRegister';
+import {SystemList} from "../systemList/systemList";
 
 @Component({
-    templateUrl: 'build/pages/getting-started/getting-started.html',
+    templateUrl: 'build/pages/login/login.html',
     directives: [LoginRegister]
 })
 export class Login {
@@ -13,7 +12,8 @@ export class Login {
     constructor(private _navController: NavController) {
     }
 
-    goToFactsPage() {
-        this._navController.push(ScientificFactsPage);
+    private loginHandler(data: any) {
+        console.info('login success');
+        this._navController.push(SystemList);
     }
 }

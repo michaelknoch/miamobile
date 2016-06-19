@@ -2,17 +2,22 @@
     <button menuToggle>
         <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Getting Started</ion-title>
+    <ion-title>Login</ion-title>
 </ion-navbar>
 
 
-<ion-content padding class="getting-started">
+<ion-content padding class="login">
 
-    <h3>Welcome to Ionic</h3>
-    <p>Want to learn some facts? Click below.</p>
-    <button (click)="goToFactsPage()">Scientific Facts</button>
-    <button secondary menuToggle>Toggle Menu</button>
+    <div class="login-container">
+        <div class="container">
+            <div class="row">
 
-    <login-register></login-register>
+                <div class="form-wrapper">
+                    <img src="../../assets/logo.png" class="logo center">
+                    <login-register (loginEvent)="loginHandler($event)"></login-register>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </ion-content>
