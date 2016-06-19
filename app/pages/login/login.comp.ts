@@ -8,7 +8,7 @@ import {LoginRegister} from 'mia-distributed/comp/login/loginRegister';
     templateUrl: 'build/pages/getting-started/getting-started.html',
     directives: [LoginRegister]
 })
-export class GettingStartedPage {
+export class Login {
 
     constructor(private _navController: NavController) {
     }
