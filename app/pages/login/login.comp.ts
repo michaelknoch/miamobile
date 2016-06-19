@@ -9,11 +9,11 @@ import {SystemList} from "../systemList/systemList";
 })
 export class Login {
 
-    constructor(private _navController: NavController) {
+    constructor(private nav: NavController) {
     }
 
     private loginHandler(data: any) {
         console.info('login success');
-        this._navController.push(SystemList);
+        this.nav.setRoot(SystemList);
     }
 }
