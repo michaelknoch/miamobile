@@ -3,6 +3,7 @@ import {App, ionicBootstrap, Platform, Nav} from 'ionic-angular';
 import {StatusBar} from 'ionic-native';
 import {GettingStartedPage} from './pages/getting-started/getting-started';
 import {ListPage} from './pages/list/list';
+import {LocalStorageService, LocalStorageSubscriber} from 'angular2-localstorage/dist';
 
 @Component({
     templateUrl: 'build/app.html'
@@ -39,4 +40,8 @@ class MyApp {
     }
 }
 
-ionicBootstrap(MyApp);
+var appPromise = ionicBootstrap(MyApp, [
+    LocalStorageService
+]);
+
+LocalStorageSubscriber(appPromise);

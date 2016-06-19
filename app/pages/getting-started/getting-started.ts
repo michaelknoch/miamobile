@@ -1,13 +1,12 @@
 import {Component} from '@angular/core';
 import {NavController} from 'ionic-angular';
 import {ScientificFactsPage} from '../scientific-facts-page/scientific-facts-page';
+
 import {LoginRegister} from 'mia-distributed/comp/login/loginRegister';
-import {UserService} from 'mia-distributed/service/user/user.service'
 
 @Component({
     templateUrl: 'build/pages/getting-started/getting-started.html',
-    directives: [LoginRegister],
-    providers: [UserService],
+    directives: [LoginRegister]
 })
 export class GettingStartedPage {
 
