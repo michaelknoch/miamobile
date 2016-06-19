@@ -2,15 +2,9 @@ import {Component, ViewChild, provide} from '@angular/core';
 import {App, ionicBootstrap, Platform, Nav} from 'ionic-angular';
 import {StatusBar} from 'ionic-native';
 import {Login} from './pages/login/login.comp';
-
 import {BrowserXhr} from '@angular/http';
-
 import {LocalStorageService, LocalStorageSubscriber} from 'angular2-localstorage/dist';
-import {Dashboard} from "mia-distributed/comp/dashboard/comp";
 import {ApplicationList} from "mia-distributed/comp/applicationList/applicationList.comp";
-import {Metrics} from "mia-distributed/comp/metrics/metrics.comp";
-import {Graph} from "mia-distributed/comp/graph/graph.comp";
-import {Settings} from "mia-distributed/comp/settings/comp";
 import {SystemService} from "mia-distributed/service/system/system.service";
 import {MetricService} from "mia-distributed/service/metric/metric.service";
 import {GraphService} from "mia-distributed/service/graph.service";
@@ -18,6 +12,9 @@ import {ApplicationService} from "mia-distributed/service/application/applicatio
 import {UserService} from "mia-distributed/service/user/user.service";
 import {CustomBrowserXhr} from "mia-distributed/service/CustomBrowserXhr";
 import {ApplicationMetaPickerService} from "mia-distributed/comp/applicationMetaPicker/applicationMetaPicker.service";
+import {DashboardView} from "./pages/dashboardView/dashboardView";
+import {MetricsView} from "./pages/metricsView/metricsView";
+import {GraphView} from "./pages/graphView/graphView";
 
 @Component({
     templateUrl: 'build/app.html'
@@ -33,11 +30,10 @@ class MyApp {
 
         // used for an example of ngFor and navigation
         this.pages = [
-            {title: 'Dashboard', component: Dashboard},
+            {title: 'Dashboard', component: DashboardView},
             {title: 'Applications', component: ApplicationList},
-            {title: 'Metrics', component: Metrics},
-            {title: 'Graph', component: Graph},
-            {title: 'Settings', component: Settings}
+            {title: 'Metrics', component: MetricsView},
+            {title: 'Graph', component: GraphView}
         ];
 
     }
