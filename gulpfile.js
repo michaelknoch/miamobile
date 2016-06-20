@@ -68,7 +68,7 @@ gulp.task('build', ['clean'], function (done) {
 });
 
 gulp.task('assets', function () {
-    return gulp.src('app/assets/**/*').pipe(gulp.dest('www/assets'));
+    return gulp.src('app/assets/**/*').pipe(gulp.dest('www/build/assets'));
 });
 
 
