@@ -10,7 +10,9 @@
 @import "../pages/metricsView/metricsView";
 @import "../pages/systemList/systemList";
 @import "../pages/applicationsView/applicationsView";
-@import 'colors';
+
+@import '../../node_modules/mia-distributed/colors';
+@import '../../node_modules/mia-distributed/shared';
 
 *:focus {
     outline: none !important;
@@ -113,9 +115,7 @@ a {
     color: $darkgrey;
 }
 
-h2, h3 {
-    color: white;
-}
+
 
 .chart-height {
     min-height: 200px;
@@ -131,7 +131,7 @@ h2, h3 {
 }
 
 body, ion-content {
-    background-color: $asphalt;
+    background-color: white;
 }
 
 .loading {
