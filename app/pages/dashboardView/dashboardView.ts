@@ -1,6 +1,6 @@
 import {Component} from "@angular/core";
 import {NavController, NavParams} from 'ionic-angular';
-import {Dashboard} from "mia-distributed/comp/dashboard/comp";
+import {Dashboard} from "mia-distributed/comp/dashboard/dashboard.comp";
 
 @Component({
     templateUrl: 'build/pages/dashboardView/dashboardView.html',
