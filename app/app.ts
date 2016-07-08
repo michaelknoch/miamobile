@@ -1,6 +1,6 @@
 import {Component, ViewChild, provide} from '@angular/core';
 import {App, ionicBootstrap, Platform, Nav} from 'ionic-angular';
-import {StatusBar} from 'ionic-native';
+import {StatusBar, Keyboard, Splashscreen} from 'ionic-native';
 import {Login} from './pages/login/login.comp';
 import {BrowserXhr} from '@angular/http';
 import {LocalStorageService, LocalStorageSubscriber} from 'angular2-localstorage/dist';
@@ -40,9 +40,9 @@ class MyApp {
 
     initializeApp() {
         this.platform.ready().then(() => {
-            // Okay, so the platform is ready and our plugins are available.
-            // Here you can do any higher level native things you might need.
             StatusBar.styleDefault();
+            Splashscreen.hide();
+            Keyboard.hideKeyboardAccessoryBar(false);
         });
     }
 
@@ -64,4 +64,4 @@ var appPromise = ionicBootstrap(MyApp, [
     provide(BrowserXhr, {useClass: CustomBrowserXhr})
 ]);
 
-LocalStorageSubscriber(appPromise);
+//LocalStorageSubscriber(appPromise);

@@ -1,5 +1,12 @@
 .login {
 
+    .nav {
+        margin-top: 30px;
+        a {
+            height: 50px;
+        }
+    }
+
     p {
         margin: 20px 0;
         line-height: 22px;
@@ -8,6 +15,14 @@
 
     .login-container {
 
+    }
+
+    .nav-pills li {
+        width: 50%;
+        margin: 0 !important;
+        padding: 0;
+        float: left;
+        height: 50px;
     }
 
 }
