@@ -16,6 +16,7 @@ import {DashboardView} from "./pages/dashboardView/dashboardView";
 import {MetricsView} from "./pages/metricsView/metricsView";
 import {GraphView} from "./pages/graphView/graphView";
 import {ApplicationsView} from "./pages/applicationsView/applicationsView";
+import {MobileUserService} from "./services/user.service";
 
 @Component({
     templateUrl: 'build/app.html'
@@ -57,7 +58,7 @@ class MyApp {
 var appPromise = ionicBootstrap(MyApp, [
     LocalStorageService,
     SystemService,
-    UserService,
+    provide(UserService, {useClass: MobileUserService}),
     MetricService,
     GraphService,
     ApplicationService,

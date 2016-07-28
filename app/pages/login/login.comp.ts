@@ -3,11 +3,11 @@ import {NavController} from 'ionic-angular';
 import {LoginRegister} from 'mia-distributed/comp/login/loginRegister';
 import {SystemList} from "../systemList/systemList";
 import {UserService} from "mia-distributed/sharedServices/user.service";
-import {Dashboard} from "mia-distributed/comp/dashboard/dashboard.comp";
+import {DashboardView} from "../dashboardView/dashboardView";
 
 @Component({
     templateUrl: 'build/pages/login/login.html',
-    directives: [LoginRegister]
+    directives: [LoginRegister],
 })
 export class Login implements OnInit {
 
@@ -15,10 +15,11 @@ export class Login implements OnInit {
     }
 
     ngOnInit(): any {
-        const localMe = this._userService.getLocalMe();
+
+        const localMe:any = this._userService.getLocalMe();
         if (localMe.user.id && localMe.system.id) {
             console.log('found local system, redirecting');
-            this.nav.setRoot(Dashboard)
+            this.nav.setRoot(DashboardView)
 
         } else if (!localMe.system.id && localMe.user.id) {
             this.nav.setRoot(SystemList);
