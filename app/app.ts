@@ -4,12 +4,13 @@ import {StatusBar, Keyboard, Splashscreen} from 'ionic-native';
 import {Login} from './pages/login/login.comp';
 import {BrowserXhr} from '@angular/http';
 import {LocalStorageService, LocalStorageSubscriber} from 'angular2-localstorage/dist';
-import {SystemService} from "mia-distributed/service/system/system.service";
-import {MetricService} from "mia-distributed/service/metric/metric.service";
-import {GraphService} from "mia-distributed/service/graph.service";
-import {ApplicationService} from "mia-distributed/service/application/application.service";
-import {UserService} from "mia-distributed/service/user/user.service";
-import {CustomBrowserXhr} from "mia-distributed/service/CustomBrowserXhr";
+import {SystemService} from "mia-distributed/comp/systemList/system.service";
+import {UtilService} from "mia-distributed/sharedServices/util.service";
+import {MetricService} from "mia-distributed/sharedServices/metric.service";
+import {GraphService} from "mia-distributed/comp/graph/graph.service";
+import {ApplicationService} from "mia-distributed/comp/applications/application.service";
+import {UserService} from "mia-distributed/sharedServices/user.service";
+import {CustomBrowserXhr} from "mia-distributed/sharedServices/CustomBrowserXhr";
 import {ApplicationMetaPickerService} from "mia-distributed/comp/applicationMetaPicker/applicationMetaPicker.service";
 import {DashboardView} from "./pages/dashboardView/dashboardView";
 import {MetricsView} from "./pages/metricsView/metricsView";
@@ -61,6 +62,7 @@ var appPromise = ionicBootstrap(MyApp, [
     GraphService,
     ApplicationService,
     ApplicationMetaPickerService,
+    UtilService,
     provide(BrowserXhr, {useClass: CustomBrowserXhr})
 ]);
 
