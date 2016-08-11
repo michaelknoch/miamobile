@@ -10,9 +10,13 @@
 @import "../pages/metricsView/metricsView";
 @import "../pages/systemList/systemList";
 @import "../pages/applicationsView/applicationsView";
-
 @import '../../node_modules/mia-distributed/colors';
 @import '../../node_modules/mia-distributed/shared';
+@import './font/fontface';
+
+@include font-face('OpenSans-Regular', './font/OpenSans-Regular-webfont');
+@include font-face('OpenSans-Semibold', './font/OpenSans-Semibold-webfont');
+@include font-face('OpenSans-Light', './font/OpenSans-Light-webfont');
 
 *:focus {
     outline: none !important;
@@ -22,6 +26,10 @@ ul {
     list-style: none;
     padding: 0;
     margin: 0;
+}
+
+body {
+    font-family: 'OpenSans-Light', 'Helvetica Neue';
 }
 
 .container-fluid {
@@ -95,7 +103,7 @@ ul {
     transition-duration: 0.3s;
     margin: 0;
     &:hover {
-        background-color: #DFBA2E;
+        background-color: #e74c3c;
     }
 }
 
@@ -114,8 +122,6 @@ a {
 .content a {
     color: $darkgrey;
 }
-
-
 
 .chart-height {
     min-height: 200px;
@@ -164,4 +170,50 @@ img.center {
 
 .btn-default.button {
     height: 50px;
+}
+
+.system-wrapper {
+    padding-top: 0 !important;
+}
+
+.toolbar-background {
+    background: black;
+}
+
+.toolbar-title, .bar-button-default {
+    color: whitesmoke;
+}
+
+.space-top {
+    margin-top: 15px;
+}
+
+.space-bottom {
+    margin-bottom: 15px;
+}
+
+.app-meta-picker-wrapper .dropdown {
+    border-right: none !important;
+}
+
+.placeholder {
+    margin-top: 15px;
+}
+
+.app-meta-picker-wrapper {
+    margin-top: 15px;
+}
+
+.lock {
+    background-image: url('../assets/backdrop.jpg');
+    background-size: cover;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    &.active {
+        display: block;
+    }
 }

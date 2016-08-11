@@ -17,9 +17,13 @@ import {MetricsView} from "./pages/metricsView/metricsView";
 import {GraphView} from "./pages/graphView/graphView";
 import {ApplicationsView} from "./pages/applicationsView/applicationsView";
 import {MobileUserService} from "./services/user.service";
+import {JournalView} from "./pages/journalView/journalView";
+import {GenericModalService} from "mia-distributed/comp/genericModal/genericModal.service"
+import {TouchId} from "./components/touchId/touchId.comp";
 
 @Component({
-    templateUrl: 'build/app.html'
+    templateUrl: 'build/app.html',
+    directives: [TouchId]
 })
 class MyApp {
     @ViewChild(Nav) nav: Nav;
@@ -35,7 +39,8 @@ class MyApp {
             {title: 'Dashboard', component: DashboardView},
             {title: 'Applications', component: ApplicationsView},
             {title: 'Metrics', component: MetricsView},
-            {title: 'Graph', component: GraphView}
+            {title: 'Graph', component: GraphView},
+            {title: 'Journal', component: JournalView}
         ];
 
     }
@@ -64,6 +69,7 @@ var appPromise = ionicBootstrap(MyApp, [
     ApplicationService,
     MetaPickerService,
     UtilService,
+    GenericModalService,
     provide(BrowserXhr, {useClass: CustomBrowserXhr})
 ]);
 

@@ -1,12 +1,12 @@
 import {Component} from "@angular/core";
 import {NavController, NavParams} from 'ionic-angular';
-import {Dashboard} from "mia-distributed/comp/dashboard/dashboard.comp";
+import {Journal} from "mia-distributed/comp/journal/journal.comp";
 
 @Component({
-    templateUrl: 'build/pages/dashboardView/dashboardView.html',
-    directives: [Dashboard]
+    templateUrl: 'build/pages/journalView/journalView.html',
+    directives: [Journal]
 })
-export class DashboardView {
+export class JournalView {
 
     constructor(private nav: NavController, navParams: NavParams) {
     }
