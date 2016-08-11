@@ -37,7 +37,7 @@ var isRelease = argv.indexOf('--release') > -1;
 
 gulp.task('watch', ['clean'], function (done) {
     runSequence(
-        ['sass', 'html', 'fonts', 'scripts', 'assets'],
+        ['font', 'sass', 'html', 'fonts', 'scripts', 'assets'],
         function () {
             gulpWatch('app/**/*.scss', function () {
                 gulp.start('sass');
@@ -74,6 +74,9 @@ gulp.task('assets', function () {
 
 gulp.task('sass', buildSass);
 gulp.task('html', copyHTML);
+gulp.task('font', function () {
+    return gulp.src('app/theme/font/**/*').pipe(gulp.dest('www/build/css/font'));
+});
 gulp.task('fonts', copyFonts);
 gulp.task('scripts', function () {
     return copyScripts({
@@ -90,3 +93,4 @@ gulp.task('scripts', function () {
 gulp.task('clean', function () {
     return del('www/build');
 });
+
