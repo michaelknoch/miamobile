@@ -17,6 +17,10 @@ export class TouchId implements OnInit {
     }
 
     ngOnInit() {
+        if (typeof touchid === 'undefined') {
+            return;
+        }
+
         this.platform.ready().then(() => {
             touchid.checkSupport(() => {
                 this.platform.resume.subscribe(data => {
