@@ -1,0 +1,28 @@
+<ion-header>
+    <ion-navbar>
+        <button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Traces</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <div class="container">
+        <div class="fullwidth space-bottom traces">
+
+            <div *ngFor="let trace of traces" class="trace pointer col-xs-12 col-sm-8"
+                 (click)="navigate(trace.request.traceId)">
+                <span class="bold fullwidth">TraceId: {{trace.request.traceId}}</span>
+                <span class="bold">{{trace.receiver.name}}</span> {{trace.request.name}}
+                <div class="fullwidth">Duration: {{trace.request.duration / 1000}}ms</div>
+            </div>
+
+            <div *ngIf="!traces.length"
+                 class="pointer placeholder col-xs-12 col-sm-5">
+                <span>There are no traces</span>
+            </div>
+
+        </div>
+    </div>
+</ion-content>
