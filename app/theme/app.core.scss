@@ -217,3 +217,20 @@ img.center {
         display: block;
     }
 }
+
+.traces .trace {
+    padding: 15px;
+    background-color: $green_opac;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-left: 2px solid $green;
+}
+
+h2.headline {
+    display: none;
+}
+
+.backdrop {
+    background-image: url('../assets/backdrop.jpg');
+    background-size: cover;
+}
